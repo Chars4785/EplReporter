@@ -7,29 +7,21 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import { View,  Text,StyleSheet } from 'react-native';
+import Navigation from './app/Navigation';
 
 function App(){
   return(
-    <View>
-      <Text>asd</Text>
-    </View>
+    
   )
 }
+
+const styles = StyleSheet.create({
+  Frist :{
+    flex:1,
+    backgroundColor: 'blue',
+  }
+})
+
 
 export default App;
