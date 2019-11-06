@@ -1,27 +1,43 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+import React,{ Component } from 'react';
+import { StyleSheet, View, Text,Image } from 'react-native';
+import {
+  createAppContainer,
+  createStackNavigator,
+} from 'react-navigation';
+import { Icon } from 'native-base';
+import Images from '@assets/images';
+import DefaultHeader from './app/component/DefaultHeader'
 
-import React from 'react';
-import { View,  Text,StyleSheet } from 'react-native';
-import Navigation from './app/Navigation';
+class HomeScreen extends Component {
 
-function App(){
-  return(
-    
-  )
+  // navigationOptions 코드 추가
+
+  render() {
+    return (
+      <View>
+        <Text>MainScreen</Text>
+      </View>
+    );
+  }
 }
 
-const styles = StyleSheet.create({
-  Frist :{
-    flex:1,
-    backgroundColor: 'blue',
-  }
-})
+const AppNavigator = createStackNavigator({
+  Home: {
+    screen: HomeScreen,
+    
+  },
+},
+  {
+    initialRouteName: 'Home',
+    headerLayoutPreset: 'center',
+    defaultNavigationOptions:{
+      header:DefaultHeader,
+      title: 'EPL',
 
+    },
+  }
+);
+
+const App = createAppContainer(AppNavigator)
 
 export default App;
