@@ -36,6 +36,8 @@ target 'Epl' do
 
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
+  pod 'react-native-safe-area', :path => '../node_modules/react-native-safe-area'
+
   target 'EplTests' do
     inherit! :search_paths
     # Pods for testing
