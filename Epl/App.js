@@ -1,43 +1,37 @@
-import React,{ Component } from 'react';
-import { StyleSheet, View, Text,Image } from 'react-native';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow
+ */
+
+import React from 'react';
 import {
-  createAppContainer,
-  createStackNavigator,
-} from 'react-navigation';
-import { Icon } from 'native-base';
-import Images from '@assets/images';
-import DefaultHeader from './app/component/DefaultHeader'
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+} from 'react-native';
 
-class HomeScreen extends Component {
+import {
+  Header,
+  LearnMoreLinks,
+  Colors,
+  DebugInstructions,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
+import moment from 'moment';
+import Navigation from './app/Navigation'
 
-  // navigationOptions 코드 추가
-
-  render() {
-    return (
-      <View>
-        <Text>MainScreen</Text>
-      </View>
-    );
-  }
+function App(){
+  return (
+    <>
+      <Navigation />
+    </>
+  )
 }
-
-const AppNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen,
-    
-  },
-},
-  {
-    initialRouteName: 'Home',
-    headerLayoutPreset: 'center',
-    defaultNavigationOptions:{
-      header:DefaultHeader,
-      title: 'EPL',
-
-    },
-  }
-);
-
-const App = createAppContainer(AppNavigator)
 
 export default App;
